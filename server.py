@@ -12,8 +12,6 @@ GOOGLE_CLIENT_ID = os.environ['GOOGLE_CLIENT_ID']
 def index():
     """Homepage"""
 
-    index_page = True
-
     return render_template("index.html", google_client_id=GOOGLE_CLIENT_ID)
 
 
