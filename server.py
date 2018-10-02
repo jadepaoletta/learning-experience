@@ -14,10 +14,22 @@ def index():
 
     return render_template("index.html", google_client_id=GOOGLE_CLIENT_ID)
 
+@app.route('/about')
+def about():
+    """Display the About page"""
+
+    return render_template("about.html")
+
+@app.route('/parents')
+def parents():
+    """Display the Parents page"""
+
+    return render_template("parents.html")
+
 
 
 if __name__ == "__main__":
-    app.debug = False
+    app.debug = True
     app.jinja_env.auto_reload = app.debug
 
 
